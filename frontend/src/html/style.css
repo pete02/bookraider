@@ -1,0 +1,28 @@
+.test{
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+body {
+    background-color: #4f4f4f;
+  }
+
+button{
+    background-color: burlywood;
+}
+input{
+    background-color: #2f2f2f;
+    color: white;
+    height: 30px;
+    width: fit-content;
+    max-width: 400px;
+    font-size: larger;
+}
+p{
+    color: white;
+    text-align: center;
+}

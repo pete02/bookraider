@@ -1,0 +1,335 @@
+1653309582983	geckodriver	INFO	Listening on 127.0.0.1:59329
+1653309586015	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileDlsPBA"
+*** You are running in headless mode.
+1653309586327	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileDlsPBA\\search.json.mozlz4", (void 0)))
+1653309587101	Marionette	INFO	Listening on port 59339
+1653309587566	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653309590567	Marionette	INFO	Stopped listening on port 59339
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\petri\AppData\Local\Temp\rust_mozprofileDlsPBA\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653309602798	geckodriver	INFO	Listening on 127.0.0.1:59418
+1653309605832	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileSKbNuw"
+*** You are running in headless mode.
+1653309606058	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileSKbNuw\\search.json.mozlz4", (void 0)))
+1653309606850	Marionette	INFO	Listening on port 59428
+1653309606870	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+1653309610704	Marionette	INFO	Stopped listening on port 59428
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\petri\AppData\Local\Temp\rust_mozprofileSKbNuw\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653309698637	geckodriver	INFO	Listening on 127.0.0.1:59539
+1653309701671	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileFR78IK"
+*** You are running in headless mode.
+1653309701909	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileFR78IK\\search.json.mozlz4", (void 0)))
+1653309702796	Marionette	INFO	Listening on port 59550
+1653309703215	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+1653309706759	Marionette	INFO	Stopped listening on port 59550
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\petri\AppData\Local\Temp\rust_mozprofileFR78IK\protections.sqlite
+1653309751872	geckodriver	INFO	Listening on 127.0.0.1:59636
+1653309754912	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileZ4mjAU"
+*** You are running in headless mode.
+1653309755132	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileZ4mjAU\\search.json.mozlz4", (void 0)))
+1653309755894	Marionette	INFO	Listening on port 59646
+1653309755942	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+1653309759178	Marionette	INFO	Stopped listening on port 59646
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\petri\AppData\Local\Temp\rust_mozprofileZ4mjAU\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653309886107	geckodriver	INFO	Listening on 127.0.0.1:59779
+1653309889126	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofilehOGj8G"
+*** You are running in headless mode.
+1653309889345	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofilehOGj8G\\search.json.mozlz4", (void 0)))
+1653309890112	Marionette	INFO	Listening on port 59789
+1653309890149	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+1653309893509	Marionette	INFO	Stopped listening on port 59789
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\petri\AppData\Local\Temp\rust_mozprofilehOGj8G\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653309933669	geckodriver	INFO	Listening on 127.0.0.1:59883
+1653309936708	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileAoMQY3"
+*** You are running in headless mode.
+1653309936977	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileAoMQY3\\search.json.mozlz4", (void 0)))
+1653309937828	Marionette	INFO	Listening on port 59897
+1653309938246	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+1653309941686	Marionette	INFO	Stopped listening on port 59897
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390145,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390145,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390145,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390145,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x230030,name=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\petri\AppData\Local\Temp\rust_mozprofileAoMQY3\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653310030597	geckodriver	INFO	Listening on 127.0.0.1:54039
+1653310033632	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofile1SEjuq"
+*** You are running in headless mode.
+1653310033844	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofile1SEjuq\\search.json.mozlz4", (void 0)))
+1653310034608	Marionette	INFO	Listening on port 54050
+1653310034665	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653310038351	Marionette	INFO	Stopped listening on port 54050
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\petri\AppData\Local\Temp\rust_mozprofile1SEjuq\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653310239664	geckodriver	INFO	Listening on 127.0.0.1:54302
+1653310242694	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileHByX9A"
+*** You are running in headless mode.
+1653310242909	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileHByX9A\\search.json.mozlz4", (void 0)))
+1653310243715	Marionette	INFO	Listening on port 54313
+1653310243733	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653310247322	Marionette	INFO	Stopped listening on port 54313
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\petri\AppData\Local\Temp\rust_mozprofileHByX9A\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653310300407	geckodriver	INFO	Listening on 127.0.0.1:54408
+1653310303441	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofilesYOnme"
+*** You are running in headless mode.
+1653310303665	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofilesYOnme\\search.json.mozlz4", (void 0)))
+1653310304491	Marionette	INFO	Listening on port 54419
+1653310304983	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+1653310308717	Marionette	INFO	Stopped listening on port 54419
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\petri\AppData\Local\Temp\rust_mozprofilesYOnme\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653310432069	geckodriver	INFO	Listening on 127.0.0.1:54548
+1653310435100	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileVYdIF1"
+*** You are running in headless mode.
+1653310435354	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileVYdIF1\\search.json.mozlz4", (void 0)))
+1653310436246	Marionette	INFO	Listening on port 54559
+1653310436650	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653310437577	Marionette	INFO	Stopped listening on port 54559
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+1653310468976	geckodriver	INFO	Listening on 127.0.0.1:54620
+1653310472001	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofile38uBQq"
+*** You are running in headless mode.
+1653310472230	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofile38uBQq\\search.json.mozlz4", (void 0)))
+1653310473047	Marionette	INFO	Listening on port 54631
+1653310473540	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653310475708	Marionette	INFO	Stopped listening on port 54631
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653310521285	geckodriver	INFO	Listening on 127.0.0.1:54697
+1653310524315	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofile0IQF43"
+*** You are running in headless mode.
+1653310524542	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofile0IQF43\\search.json.mozlz4", (void 0)))
+1653310525355	Marionette	INFO	Listening on port 54706
+1653310525857	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653310526907	Marionette	INFO	Stopped listening on port 54706
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+1653310909216	geckodriver	INFO	Listening on 127.0.0.1:61822
+1653310912254	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofiles5OKKz"
+*** You are running in headless mode.
+1653310912489	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofiles5OKKz\\search.json.mozlz4", (void 0)))
+1653310913307	Marionette	INFO	Listening on port 61832
+1653310913807	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653310914891	Marionette	INFO	Stopped listening on port 61832
+1653311168349	geckodriver	INFO	Listening on 127.0.0.1:62067
+1653311171395	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileylXFEW"
+*** You are running in headless mode.
+1653311171725	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileylXFEW\\search.json.mozlz4", (void 0)))
+1653311172495	Marionette	INFO	Listening on port 62077
+1653311172922	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+1653311176821	Marionette	INFO	Stopped listening on port 62077
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\petri\AppData\Local\Temp\rust_mozprofileylXFEW\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653311181014	geckodriver	INFO	Listening on 127.0.0.1:62139
+1653311184040	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileASOt8k"
+*** You are running in headless mode.
+1653311184276	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileASOt8k\\search.json.mozlz4", (void 0)))
+1653311185121	Marionette	INFO	Listening on port 62148
+1653311185579	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cdn.vidcrunch.com/integrations/625eefdee9dce8fb694195d7/Pubfuture_Fulllengthaudiobooks.com_Responsive_IBV_300x250_DFP_Rev70_1904.js, line 2: TypeError: window.avPlayer is not a constructor
+1653311190903	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1653311233300	Marionette	INFO	Stopped listening on port 62148
+1653311246879	geckodriver	INFO	Listening on 127.0.0.1:51952
+1653311249911	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofilewXf9tu"
+*** You are running in headless mode.
+1653311250162	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofilewXf9tu\\search.json.mozlz4", (void 0)))
+1653311250982	Marionette	INFO	Listening on port 51962
+1653311251465	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cdn.vidcrunch.com/integrations/625eefdee9dce8fb694195d7/Pubfuture_Fulllengthaudiobooks.com_Responsive_IBV_300x250_DFP_Rev70_1904.js, line 2: TypeError: window.avPlayer is not a constructor
+1653311255545	Marionette	INFO	Stopped listening on port 51962
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\petri\AppData\Local\Temp\rust_mozprofilewXf9tu\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653311265628	geckodriver	INFO	Listening on 127.0.0.1:52033
+1653311268659	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofilefjeijU"
+*** You are running in headless mode.
+1653311268875	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofilefjeijU\\search.json.mozlz4", (void 0)))
+1653311269665	Marionette	INFO	Listening on port 52042
+1653311269697	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cdn.vidcrunch.com/integrations/625eefdee9dce8fb694195d7/Pubfuture_Fulllengthaudiobooks.com_Responsive_IBV_300x250_DFP_Rev70_1904.js, line 2: TypeError: window.avPlayer is not a constructor
+1653311275091	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1653311311997	Marionette	INFO	Stopped listening on port 52042
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1653312166433	geckodriver	INFO	Listening on 127.0.0.1:51165
+1653312169471	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileMObtIt"
+*** You are running in headless mode.
+1653312169757	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\petri\\AppData\\Local\\Temp\\rust_mozprofileMObtIt\\search.json.mozlz4", (void 0)))
+1653312170670	Marionette	INFO	Listening on port 51174
+1653312171024	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cnt.trvdp.com/js/1441/6099.js, line 1: SyntaxError: redeclaration of let mobileCheck1
+JavaScript error: https://cdn.vidcrunch.com/integrations/625eefdee9dce8fb694195d7/Pubfuture_Fulllengthaudiobooks.com_Responsive_IBV_300x250_DFP_Rev70_1904.js, line 2: TypeError: window.avPlayer is not a constructor
+[Child 23132, MediaDecoderStateMachine #1] WARNING: 241e8d74580 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 23132, MediaDecoderStateMachine #1] WARNING: 241827672e0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 23132, MediaDecoderStateMachine #1] WARNING: 24182767580 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 23132, MediaDecoderStateMachine #1] WARNING: 24182767120 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 23132, MediaDecoderStateMachine #1] WARNING: 241829eb820 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 23132, MediaDecoderStateMachine #1] WARNING: 24182194660 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 23132, MediaDecoderStateMachine #1] WARNING: 241800c6f20 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 23132, MediaDecoderStateMachine #1] WARNING: 241823fa660 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+JavaScript warning: https://pagead2.googlesyndication.com/bg/arPbY-3YgYGr_MCC2cNf3gMi8SxKBb_Vamoqi1J17n4.js line 1 > eval line 1972 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Exiting due to channel error.
+Exiting due to channel error.
