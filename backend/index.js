@@ -36,6 +36,7 @@ app.post('/api/find',async (req,res)=>{
     let[find,google]=await Promise.all([findBook(req.body),getGoogleBook(req.body)])
     console.log(find)
     console.log(google)
+    res.send(find)
 })
 
 
