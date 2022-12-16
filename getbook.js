@@ -4,6 +4,10 @@ const getGoogleBook = require('./getBookData');
 const findBook=require('./getBookLinks')
 const ID3Writer = require('browser-id3-writer')
 const audio=require('./audio')
+const sharp =require( 'sharp')
+var http = require('http'),                                                
+ Stream = require('stream').Transform                                  
+
 
 async function fetchBook(url){
     return fetch(url)
@@ -24,7 +28,8 @@ async function handleBook(book){
     console.log(book)
     let [bookData,booklist]=await Promise.all([getGoogleBook(book),findBook(book)]).catch(err=>console.log(err))
     if(booklist.length>0){
-        bookData=bookData.data.items[0].volumeInfo
+        bookData=JSON.parse(bookData).items[0].volumeInfo
+        console.log(bookData)
         booklist=await Promise.all(booklist.map(a => {
             console.log(a)
             return fetchBook(a)
@@ -37,6 +42,27 @@ async function handleBook(book){
         if (!fs.existsSync()){
             fs.mkdirSync(dir, { recursive: true });
         }
+        var dir2 = `/mp3/ready/${bookData.authors[0]}/${book.name}/`;
+        if (!fs.existsSync()){
+            fs.mkdirSync(dir2, { recursive: true });
+        }
+        http.request(bookData.imageLinks.thumbnail, function(response) {                                        
+            var data = new Stream();                                                    
+          
+            response.on('data', function(chunk) {                                       
+              data.push(chunk);                                                         
+            });                                                                         
+          
+            response.on('end', function() {
+                sharp()
+                .resize({width:183, height:183, fit:"contain"})
+                .toBuffer()
+                .then(data => {
+                    fs.writeFileSync(`/${dir2}folder.jpg`, data);
+                })
+                                            
+            });                                                                         
+          }).end();
         booklist=await Promise.all(booklist.map(a=>a.buffer()))
         let list=[]
         booklist.forEach(element => {

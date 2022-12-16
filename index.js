@@ -32,24 +32,10 @@ app.post('/api/get',(req,res)=>{
     })
 })
 
-app.post('/api/find',(req,res)=>{
-    findBook(req.body).then(response=>{
-        console.log(response)
-        const lins=response
-        getGoogleBook(req.body).then(resp=>{
-            
-            if(lins&&lins.length>0){
-                if(resp.data.items[0].volumeInfo.imageLinks){
-                    const json={"resp":response[0],"thumbnail":resp.data.items[0].volumeInfo.imageLinks.thumbnail}
-                    
-                    res.send(json)
-                }else{
-                    console.log(resp.data.items[0].volumeInfo)
-                    res.send({"resp":response[0],"thumbnail":""})
-                }
-            }else res.send("not found")
-        }).catch(err=>console.log(err))
-    }).catch(err=>res.send("book not found"))
+app.post('/api/find',async (req,res)=>{
+    let[find,google]=await Promise.all([findBook(req.body),getGoogleBook(req.body)])
+    console.log(find)
+    console.log(google)
 })
 
 

@@ -1,7 +1,7 @@
 var audioconcat = require('audioconcat')
 const fs=require('fs')
 const audio=(songs,book,bookData)=>{
-    var dir = `/mp3/ready/${book.Author}`
+    var dir = `/mp3/ready/${book.Author}/${book.name}`
     if (!fs.existsSync(dir)){
         fs.mkdirSync(dir, { recursive: true });
     }
@@ -19,4 +19,5 @@ const audio=(songs,book,bookData)=>{
         fs.rmSync('/mp3/temp', { recursive: true, force: true });
     })
 }
+
 module.exports=audio

@@ -1,50 +1,57 @@
 
 const axios=require('axios')
+const { json } = require('express')
 const {JSDOM}=require('jsdom')
 
 
 async function findFullAudiobook(book){
-    console.log(`book${book.name}`)
-    console.log(book.name.toLowerCase().replaceAll("the ","").replaceAll(/ /g,"+"))
-    const response=await axios.get(`https://fulllengthaudiobooks.com/?s=${book.Author.replaceAll(/ /g,"+")}+${book.name.toLowerCase().replaceAll("the ","").replaceAll(/ /g,"+")}`)
-    const { document }=new JSDOM(response.data).window
-    let l=document.querySelectorAll("a")
-    let arr=Array.prototype.slice.call( l )
-    arr=arr.filter(a=>a.innerHTML.toLowerCase().replaceAll("%20","").replaceAll("-","").includes(book.name.toLowerCase().replaceAll("the ","").replaceAll(" ",""))&&a.innerHTML.toLowerCase().includes("mp3"))
-    arr=arr.map(a=>a.innerHTML)
-    let mp3arr=arr.map(a=>a.split("/")[a.split("/").length-1])
-    arr=arr.filter((a,i)=> mp3arr.indexOf(a.split("/")[a.split("/").length-1])==i)
-    return arr
+    console.log(`book: ${book.name}`)
+    console.log(`https://fulllengthaudiobook.com/?s=${book.Author.replaceAll(/ /g,"+")}+${book.name.toLowerCase().replaceAll("the ","").replaceAll(/ /g,"+")}`)
+    const response=await axios.get(`https://fulllengthaudiobook.com/?s=${book.Author.replaceAll(/ /g,"+")}+${book.name.toLowerCase().replaceAll("the ","").replaceAll(/ /g,"+")}` ,{ headers: { Accept: 'application/json', 'Accept-Encoding': 'identity' }, params: { trophies: true }})
+    console.log("full"+response.status)
+    if(response.status==200){
+        const { document }=new JSDOM(response.data).window
+        let articles=document.querySelectorAll("article")
+        let links={}
+        for(lin of articles){
+            links[lin.querySelector("h2").querySelector("a").innerHTML]=lin.querySelector("h2").querySelector("a").href
+        }
+        console.log("full done")
+        return links
+    }else{
+        let h=`error, status ${response.status}`
+        return {h:"link"}
+    }
+    
 }
 
 
 async function findGoldenAudiobook(book){
+    //main/*/*/article/header/h2/a[contains(@rel, 'bookmark')]
     console.log(`https://goldenaudiobooks.com/?s=${book.Author.replaceAll(/ /g,"+")}+${book.name.toLowerCase().replaceAll("the ","").replaceAll(/ /g,"+")}`)
-    let response=await axios.get(`https://goldenaudiobooks.com/?s=${book.Author.replaceAll(/ /g,"+")}+${book.name.toLowerCase().replaceAll("the ","").replaceAll(/ /g,"+")}`)
-    let document=new JSDOM(response.data).window
-    let l=document.document.querySelectorAll("a")
-    let arr=Array.prototype.slice.call( l )
-    arr=arr.filter(a=>a.href.toLowerCase().replaceAll(/ /g,"").replaceAll(/-/g,"").includes(book.name.toLowerCase().replaceAll("the ","").replaceAll(" ","")))
-    console.log(arr)
-    if(arr[0]!='about:blank#content'&& arr[0]){
-        response=await axios.get(arr[0])
-        document= new JSDOM(response.data).window
-        l=document.document.querySelectorAll("a")
-        arr=Array.prototype.slice.call( l )
-        arr=arr.map(a=>a.innerHTML)
-        arr=arr.filter(a=>a.includes('.mp3'))
-        return arr
+    let response=await axios.get(`https://goldenaudiobooks.com/?s=${book.Author.replaceAll(/ /g,"+")}+${book.name.toLowerCase().replaceAll("the ","").replaceAll(/ /g,"+")}`, { headers: { Accept: 'application/json', 'Accept-Encoding': 'identity' }, params: { trophies: true }})
+    console.log("golder:"+response.status)
+    if(response.status==200){
+        const { document }=new JSDOM(response.data).window
+        let articles=document.querySelectorAll("article")
+        let links={}
+        for(article of articles){
+            links[article.querySelector("a").title]=article.querySelector("a").href
+        }
+        console.log("golden done")
+        return links    
+    }else{
+        let h=`error, status ${response.status}`
+        return {h:"link"}
     }
-    else return []
+    
 }
 
 async function findBook(book){
-    let arr=await findFullAudiobook(book)
+    let [fullAudio,goldenAudio]=await Promise.all([findFullAudiobook(book),findGoldenAudiobook(book)])
+    js={"full":fullAudio,"golden":goldenAudio}
 
-    if(arr.length<1){
-        arr=await findGoldenAudiobook(book)
-    }
-    return arr
+    return js
 
 }
 module.exports=findBook
