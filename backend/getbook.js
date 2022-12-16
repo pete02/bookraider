@@ -24,7 +24,6 @@ function setMeta(buff,bookData){
     return tagged
 }
 
-
 async function handleBook(book){
     console.log(book)
     let [bookData,booklist]=await Promise.all([getGoogleBook(book),findBook(book)]).catch(err=>console.log(err))

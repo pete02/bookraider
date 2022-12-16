@@ -6,4 +6,4 @@
 .env
 ./test.js
 frontend/node_modules
-backend/jsbackend/node_modules
+backend/node_modules
