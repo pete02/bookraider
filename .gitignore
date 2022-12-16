@@ -5,3 +5,5 @@
 .pnp.js
 .env
 ./test.js
+frontend/node_modules
+backend/jsbackend/node_modules
