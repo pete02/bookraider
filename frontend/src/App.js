@@ -19,16 +19,16 @@ function App() {
   let [name,setName]=useState("")
   let [book,SetBook]=useState("")
   let [author,setAthor]=useState("")
+  let [state,setState]=useState("")
 
 
   const handle=async ()=>{
+    setState("searching for books")
     setFullData([])
     setGoldetData([])
     let res=await get(name,author)
-    console.log(res)
-    console.log(res["full"])
+    setState("book found")
     SetBook(res["google"])
-    console.log(book)
     setFullData(res["links"]["full"])
     setGoldetData(res["links"]["golden"])
 
@@ -36,7 +36,10 @@ function App() {
 
 
   const handleget=(link,name)=>{
-    axios.post("http://localhost:3001/api/get",{"link":link,"book":name})
+    setState("getting book")
+    axios.post("http://localhost:3001/api/get",{"link":link,"book":name}).then(res=>{
+      setState(res.data)
+    })
   }
   const handleKeyDown = event => {
     if (event.key === 'Enter') {
@@ -63,17 +66,17 @@ function App() {
               {fulldata.map((i) => {
                 if(fulldata.indexOf(i)===0){
                   return(
-                    <div>
+                    <div key={i.name+"fd1"}>
                       <div>fulllengthaudiobook</div>
                       <div key={i.name+"f"}>
-                        <a href={i.link}>{i.name}</a>
+                        <a key={i.link} href={i.link}>{i.name}</a>
                         <button key={i.name+"pf"} onClick={()=>{handleget(i.link,i.name)}}>get</button></div>
                     </div>
                   )
                 }else{
                   return(
                   <div key={i.name+"f"}>
-                    <a href={i.link}>{i.name}</a>
+                    <a key={i.link} href={i.link}>{i.name}</a>
                     <button key={i.name+"pf"} onClick={()=>{handleget(i.link,i.name)}}>get</button>
                     </div>
                 )
@@ -86,13 +89,13 @@ function App() {
                     <div>
                       <div>goldenaudiobooks</div>
                       <div key={i.name+"g"}>
-                        <a href={i.link}>{i.name}</a>
+                        <a key={i.link} href={i.link}>{i.name}</a>
                         <button key={i.name+"pf"} onClick={()=>{handleget(i.link,i.name)}}>get</button></div>
                     </div>
                   )
                 }else{
                   return(<div key={i.name+"g"}>
-                    <a href={i.link}>{i.name}</a>
+                    <a href={i.link} key={i.link}>{i.name}</a>
                     <button key={i.name+"pf"} onClick={()=>{handleget(i.link,i.name)}}>get</button>
                     </div>)
                 }
@@ -104,7 +107,7 @@ function App() {
         <table>
           <tr>
             <td>
-            <input value={name}  onChange={changename} onKeyDown={handleKeyDown}/>
+            <input value={name} placeholder={"book name"} onChange={changename} onKeyDown={handleKeyDown}/>
             </td>
             <td>
             <button type="button"onClick={handle}>find</button>
@@ -112,11 +115,11 @@ function App() {
           </tr>
             <tr>
               <td>
-              <input value={author}  onChange={changeauth}/>
+              <input value={author} placeholder={"author"} onChange={changeauth}/>
               </td>
             </tr>
         </table>
-        
+        <div>{state}</div>
       </header>
     </div>
   );

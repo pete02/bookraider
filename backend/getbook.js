@@ -73,8 +73,6 @@ async function handleBook(book){
     let [booklist,bookData]=await Promise.all([getBookList(book.link),getGoogleBook(name)])
     console.log(booklist)
     console.log(bookData)
-    return null
-    /*
     if(booklist.length>0){
         bookData=JSON.parse(bookData).items[0].volumeInfo
         console.log(bookData)
@@ -123,7 +121,7 @@ async function handleBook(book){
     }else{
         return("book not found")
     }
-*/
+
 }
 
 module.exports=handleBook

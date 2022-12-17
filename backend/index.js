@@ -26,10 +26,13 @@ app.use(morgan(':method :url :status - :response-time ms :body'))
   
 app.use(express.static('build'))
 
-app.post('/api/get',(req,res)=>{
+app.post('/api/get',async (req,res)=>{
     console.log(req.body)
-    handleBook(req.body)
-    res.send
+    await handleBook(req.body).then(c=>{
+        res.send(c)
+    }).catch(
+        res.send("error")
+    )
 })
 
 app.post('/api/find',async (req,res)=>{

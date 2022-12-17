@@ -18,6 +18,8 @@ a {
   text-decoration: inherit;
 }
 
+
+
 .App-header {
   background-color: #1d1e20;
   min-height: 100vh;
@@ -25,7 +27,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(1px + 2vmin);
+  font-size: calc(1px + 1vmin);
   color: white;
 }
 
