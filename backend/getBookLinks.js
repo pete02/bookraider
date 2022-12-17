@@ -12,9 +12,9 @@ async function findFullAudiobook(book){
     if(response.status==200){
         const { document }=new JSDOM(response.data).window
         let articles=document.querySelectorAll("article")
-        let links={}
+        let links=[]
         for(lin of articles){
-            links[lin.querySelector("h2").querySelector("a").innerHTML]=lin.querySelector("h2").querySelector("a").href
+            links.push({"name":lin.querySelector("h2").querySelector("a").innerHTML,"link":lin.querySelector("h2").querySelector("a").href})
         }
         console.log("full done")
         return links
@@ -34,9 +34,9 @@ async function findGoldenAudiobook(book){
     if(response.status==200){
         const { document }=new JSDOM(response.data).window
         let articles=document.querySelectorAll("article")
-        let links={}
+        let links=[]
         for(article of articles){
-            links[article.querySelector("a").title]=article.querySelector("a").href
+            links.push({"name":article.querySelector("a").title,"link":article.querySelector("a").href})
         }
         console.log("golden done")
         return links    

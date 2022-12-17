@@ -1,12 +1,13 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const fs=require('fs');
 const getGoogleBook = require('./getBookData');
-const findBook=require('./getBookLinks')
 const ID3Writer = require('browser-id3-writer')
 const audio=require('./audio')
 const sharp =require( 'sharp')
+const axios=require('axios')
 var http = require('http'),                                                
- Stream = require('stream').Transform                                  
+ Stream = require('stream').Transform     
+ const {JSDOM}=require('jsdom')                             
 
 
 async function fetchBook(url){
@@ -24,9 +25,56 @@ function setMeta(buff,bookData){
     return tagged
 }
 
+async function getBookList(link){
+    let list=[]
+    let res= await axios.get(link ,{ headers: { Accept: 'application/json', 'Accept-Encoding': 'identity' }, params: { trophies: true }})
+    if(res.status){
+        const { document }=new JSDOM(res.data).window
+        let nlist= document.querySelectorAll("a")
+        
+        for(n of nlist){
+            list.push(n.getAttribute("href"))
+        }
+        console.log(list.length)
+        
+        list2=list.filter(a=>a.includes(link))
+        
+        for(lin of list2){
+            let res= await axios.get(lin ,{ headers: { Accept: 'application/json', 'Accept-Encoding': 'identity' }, params: { trophies: true }})
+            if(res.status){
+                const { document }=new JSDOM(res.data).window
+                let nlist= document.querySelectorAll("a")
+
+                for(n of nlist){
+                    list.push(n.getAttribute("href"))
+                }
+        }
+        
+        
+        
+        }
+    }
+    list=list.filter(a=>a.includes(".mp3"))
+    return list
+}
+
 async function handleBook(book){
-    console.log(book)
-    let [bookData,booklist]=await Promise.all([getGoogleBook(book),findBook(book)]).catch(err=>console.log(err))
+    let name=book.book.toLowerCase()
+    if(name.includes("audiobook")){
+        name=name.substring(0,name.indexOf("audiobook"))
+    }
+    if(name.includes("audibook")){
+        name=name.substring(0,name.indexOf("audibook"))
+    }
+    if(name.includes("audio book")){
+        name=name.substring(0,name.indexOf("audio book"))
+    }
+    console.log(name)
+    let [booklist,bookData]=await Promise.all([getBookList(book.link),getGoogleBook(name)])
+    console.log(booklist)
+    console.log(bookData)
+    return null
+    /*
     if(booklist.length>0){
         bookData=JSON.parse(bookData).items[0].volumeInfo
         console.log(bookData)
@@ -75,7 +123,7 @@ async function handleBook(book){
     }else{
         return("book not found")
     }
-
+*/
 }
 
 module.exports=handleBook

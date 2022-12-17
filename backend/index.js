@@ -27,16 +27,24 @@ app.use(morgan(':method :url :status - :response-time ms :body'))
 app.use(express.static('build'))
 
 app.post('/api/get',(req,res)=>{
-    handleBook(req.body).then(response=>{
-        res.send(response)
-    })
+    console.log(req.body)
+    handleBook(req.body)
+    res.send
 })
 
 app.post('/api/find',async (req,res)=>{
-    let[find,google]=await Promise.all([findBook(req.body),getGoogleBook(req.body)])
+    let[find,google]=await Promise.all([findBook(req.body),getGoogleBook(req.body.Author+" "+req.body.name)])
+    google=JSON.parse(google)
+    try{
+        google=google["items"][0]["volumeInfo"]
+        google={"title":google["title"],"author":google["authors"][0],"thumbnail":google["imageLinks"]["smallThumbnail"]}
+    }catch{
+        google={"title":"not found"}
+    }
+    
     console.log(find)
     console.log(google)
-    res.send(find)
+    res.send({"links":find,"google":google})
 })
 
 

@@ -4,7 +4,8 @@ require('dotenv').config()
 
 
 async function getBookData(book){
-    const response=await axios.get(`https://bookscouter.com/search?query=${book.Author.replace(/ /g,"+")}+${book.name.replace(/ /g,"+")}`,{ headers: { Accept: 'application/json', 'Accept-Encoding': 'identity' }, params: { trophies: true }})
+    console.log(`https://bookscouter.com/search?query=${book.replace("–","").replace("’s","").trim().replace(/ /g,"+")}`)
+    const response=await axios.get(`https://bookscouter.com/search?query=${book.replace("–","").replace("’s","").trim().replace(/ /g,"+")}`,{ headers: { Accept: 'application/json', 'Accept-Encoding': 'identity' }, params: { trophies: true }})
     const {document}=new JSDOM(response.data).window
     let l=[]
     var test= document.getElementsByClassName('BookContainer_b1a7u5jm')
