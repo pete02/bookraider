@@ -4,7 +4,8 @@
   "description": "Backend of Bookraider",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "docker build --tag lumilukko/bookraider ."
   },
   "author": "",
   "license": "ISC",

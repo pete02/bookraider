@@ -8,7 +8,7 @@ import { useState } from 'react';
 async function get(name,Author){
   
   console.log("run")
-  let res=await axios.post("http://localhost:3001/api/find",{"name":name,"Author":Author})
+  let res=await axios.post("/api/find",{"name":name,"Author":Author})
   return res.data
 }
 
@@ -37,7 +37,7 @@ function App() {
 
   const handleget=(link,name)=>{
     setState("getting book")
-    axios.post("http://localhost:3001/api/get",{"link":link,"book":name}).then(res=>{
+    axios.post("/api/get",{"link":link,"book":name}).then(res=>{
       setState(res.data)
     })
   }
