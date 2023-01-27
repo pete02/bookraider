@@ -1,6 +1,7 @@
 var audioconcat = require('audioconcat')
 const fs=require('fs')
 const audio=(songs,book,bookData)=>{
+    console.log("audio")
     var dir = `/mp3/ready/${book.Author}/${book.name}`
     if (!fs.existsSync(dir)){
         fs.mkdirSync(dir, { recursive: true });

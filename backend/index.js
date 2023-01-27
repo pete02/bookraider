@@ -29,7 +29,11 @@ app.use(express.static('build'))
 app.post('/api/get',async (req,res)=>{
     console.log(req.body)
     await handleBook(req.body).then(c=>{
-        res.send(c)
+        try{
+            res.send(c)
+        }catch{
+            console.log("cant send headers")
+        }
     }).catch(
         res.send("error")
     )

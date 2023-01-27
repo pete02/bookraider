@@ -7,7 +7,8 @@ const sharp =require( 'sharp')
 const axios=require('axios')
 var http = require('http'),                                                
  Stream = require('stream').Transform     
- const {JSDOM}=require('jsdom')                             
+ const {JSDOM}=require('jsdom');                             
+const { execPath } = require('process');
 
 
 async function fetchBook(url){
@@ -18,11 +19,24 @@ async function fetchBook(url){
 
 
 function setMeta(buff,bookData){
-    let writer=new ID3Writer(buff)
-    writer.setFrame('TALB',bookData.name).setFrame('TIT2',bookData.name).setFrame('TPE1',[bookData.Author])
-    writer.addTag()
-    tagged=Buffer.from(writer.arrayBuffer)
-    return tagged
+    try{
+        let writer=new ID3Writer(buff)
+        if(bookData.name&&bookData.name!==''){
+            writer.setFrame('TALB',bookData.name).setFrame('TIT2',bookData.name)
+        }
+        if(bookData.title&&bookData.title!==''){
+            writer.setFrame('TALB',bookData.title).setFrame('TIT2',bookData.title)
+        }
+        if(bookData.Author&&bookData.Author!==''){
+            writer.setFrame('TALB',bookData.Author)
+        }
+        writer.addTag()
+        tagged=Buffer.from(writer.arrayBuffer)
+        return tagged
+    }catch{
+        console.log("error")
+    }
+    
 }
 
 async function getBookList(link){
@@ -75,6 +89,9 @@ async function handleBook(book){
     console.log(bookData)
     if(booklist.length>0){
         bookData=JSON.parse(bookData).items[0].volumeInfo
+        if(bookData.title&&bookData.title!==""){
+            book.name=bookData.title
+        }
         console.log(bookData)
         booklist=await Promise.all(booklist.map(a => {
             console.log(a)
@@ -92,23 +109,14 @@ async function handleBook(book){
         if (!fs.existsSync()){
             fs.mkdirSync(dir2, { recursive: true });
         }
-        http.request(bookData.imageLinks.thumbnail, function(response) {                                        
-            var data = new Stream();                                                    
-          
-            response.on('data', function(chunk) {                                       
-              data.push(chunk);                                                         
-            });                                                                         
-          
-            response.on('end', function() {
-                sharp()
-                .resize({width:183, height:183, fit:"contain"})
-                .toBuffer()
-                .then(data => {
-                    fs.writeFileSync(`/${dir2}folder.jpg`, data);
-                })
-                                            
-            });                                                                         
-          }).end();
+        try{
+            const res = await axios.get(bookData.imageLinks.thumbnail, { responseType: "arraybuffer" });
+            await fs.promises.writeFile(`/${dir2}Cover.jpg`, res.data);
+        }catch{
+            console.log("couldn't create thumbnail")
+        }
+        
+
         booklist=await Promise.all(booklist.map(a=>a.buffer()))
         let list=[]
         booklist.forEach(element => {
