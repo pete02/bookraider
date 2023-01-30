@@ -15,6 +15,9 @@ And this is how it looks, after it has found the book. If you press on the name,
 /api/find 
 -------------
 finds the book that it is given. It takes in json in the post request body, that is formatet as follows: {"book": name, "Author": author}. both of these can be gven text values, or left as an empty string. It will return json list, that has the names of the books it has found, and the link to the corresponing site. 
+/api/get
+-------------
+Given json as follows: {"link":link, "book": name}, it will start downloading the audiobook. It will organise the audiobook into Author/book name/ audobook.mp3 file structure. It will also download a cover for the audiobook in the same folder as the mp3
 
 # Commands
-To run localy , use Npm start command in backend folder. If you have made changes in the react forntend, first build it using npm run build in react folder, aand add the resulting build folder to backend folder. To build into a docker image, use npm run build in backend.
+To run localy , use Npm start command in backend folder. If you have made changes in the react forntend, first build it using npm run build in react folder, and add the resulting build folder to backend folder. To build into a docker image, use npm run build in backend.
