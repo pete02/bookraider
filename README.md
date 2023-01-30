@@ -1,4 +1,4 @@
-# bookraider
+# Bookraider
 Looks for audiobooks by given name, and then downloads thme and processes then for use on audiobook player.
 It searches the given audiobook fonr fulllenghtaudiobooks.com and from goldenaudiobooks.com. Then it will show all the names of the book, that it found. the audiobooks.
 
