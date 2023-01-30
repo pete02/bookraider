@@ -28,8 +28,8 @@ async function findFullAudiobook(book){
 
 async function findGoldenAudiobook(book){
     //main/*/*/article/header/h2/a[contains(@rel, 'bookmark')]
-    console.log(`https://goldenaudiobooks.com/?s=${book.Author.replaceAll(/ /g,"+")}+${book.name.toLowerCase().replaceAll("the ","").replaceAll(/ /g,"+")}`)
-    let response=await axios.get(`https://goldenaudiobooks.com/?s=${book.Author.replaceAll(/ /g,"+")}+${book.name.toLowerCase().replaceAll("the ","").replaceAll(/ /g,"+")}`, { headers: { Accept: 'application/json', 'Accept-Encoding': 'identity' }, params: { trophies: true }})
+    console.log(`https://goldenaudiobook.com/?s=${book.Author.replaceAll(/ /g,"+")}+${book.name.toLowerCase().replaceAll("the ","").replaceAll(/ /g,"+")}`)
+    let response=await axios.get(`https://goldenaudiobook.com/?s=${book.Author.replaceAll(/ /g,"+")}+${book.name.toLowerCase().replaceAll("the ","").replaceAll(/ /g,"+")}`, { headers: { Accept: 'application/json', 'Accept-Encoding': 'identity' }, params: { trophies: true }})
     console.log("golder:"+response.status)
     if(response.status==200){
         const { document }=new JSDOM(response.data).window
