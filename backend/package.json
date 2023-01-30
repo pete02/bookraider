@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "build": "docker build --tag lumilukko/bookraider ."
+    "build": "docker build --tag lumilukko/bookraider .",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
